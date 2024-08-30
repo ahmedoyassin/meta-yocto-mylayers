@@ -4,8 +4,10 @@ require recipes-core/images/rpi-test-image.bb
 # Set all local variables
 SUMMARY = "IVI Testing Image that includes rpi-test-image"
 
+inherit audio
+
 # IMAGE_INSTALL
-IMAGE_INSTALL:append=" helloworld nano rpi-play openssh"
+IMAGE_INSTALL:append=" helloworld openssh nano"
 
 #IMAGE_FEATURES
-IMAGE_FEATURES:append=" dbg-pkgs"
+IMAGE_FEATURES:append=" debug-tweaks dbg-pkgs"
